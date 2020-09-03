@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,5 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'BG Collection';
+  MainHeader = 'Angular tutorials';
 }

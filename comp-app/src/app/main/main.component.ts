@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
+  typingSomething="nothing is typed yet!";
+  divText="";
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+  onTyping(event)
+  {
+    this.typingSomething = (<HTMLInputElement>event.target).value;
   }
 
 }

@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./right.component.css']
 })
 export class RightComponent implements OnInit {
+  clickedStatus = false;
+  clickedMessage="";
+  constructor() 
+  {
 
-  constructor() { }
+   }
 
   ngOnInit(): void {
   }
-
+onClicked()
+{
+  this.clickedStatus = true;
+  
+}
 }
