@@ -8,12 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent implements OnInit {
   typingSomething="nothing is typed yet!";
   divText="";
-  constructor() { }
+  serverStatus= false;
+
+  constructor() { 
+    this.serverStatus= Math.random() > 0.5 ? true:false;
+
+  }
 
   ngOnInit(): void { }
   onTyping(event)
   {
     this.typingSomething = (<HTMLInputElement>event.target).value;
   }
-
+getColor()
+{
+  return this.serverStatus === Math.random() > 0.5 ? 'green':'red';
+}
 }
