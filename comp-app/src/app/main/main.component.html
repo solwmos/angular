@@ -1,4 +1,5 @@
 <input type="text" class="form-input" (input)="onTyping($event)"/>
+<button type="checkbox" class="btn btn-primary" (click)="addServer()">Add Server</button>
 <br/>
 {{typingSomething}}
 <p>
@@ -7,7 +8,8 @@
 <div *ngIf="serverStatus; else test">Server UP and running!</div>
 <ng-template #test>
     <div [ngStyle]="{backgroundColor:getColor()}">Server is down!</div>
-
 </ng-template>
+
+<app-server *ngFor="let server of servers"></app-server>
 
 

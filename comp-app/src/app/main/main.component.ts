@@ -5,14 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
-export class MainComponent implements OnInit {
-  typingSomething="nothing is typed yet!";
+export class MainComponent implements OnInit 
+{
+  typingSomething="Nothing is typed yet!";
   divText="";
   serverStatus= false;
+  servers = ['Server 1','Server 2'];
 
-  constructor() { 
+  constructor() 
+  { 
     this.serverStatus= Math.random() > 0.5 ? true:false;
-
   }
 
   ngOnInit(): void { }
@@ -20,8 +22,12 @@ export class MainComponent implements OnInit {
   {
     this.typingSomething = (<HTMLInputElement>event.target).value;
   }
-getColor()
-{
-  return this.serverStatus === Math.random() > 0.5 ? 'green':'red';
-}
+  addServer()
+  {
+    this.servers.push(this.typingSomething);
+  }
+  getColor()
+  {
+    return this.serverStatus === Math.random() > 0.5 ? 'green':'red';
+  }
 }
