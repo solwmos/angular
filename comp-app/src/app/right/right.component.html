@@ -1,3 +1,7 @@
 
    <button class="btn btn-primary" [disabled] = "clickedStatus" (click)="onClicked()">Add</button> 
    <p [innerText]="clickedMessage"></p>
+  <p *ngIf="clickedStatus; else noClick" style ="background-color:#000;color:#FFF">It is clicked!</p>
+  <ng-template #noClick>
+     <p>No click yet!</p>
+  </ng-template>
