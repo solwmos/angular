@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { RightComponent } from './right/right.component';
 import { MainComponent } from './main/main.component';
+import { ServersComponent } from './servers/servers.component';
+import { ServerComponent } from './server/server.component';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { MainComponent } from './main/main.component';
     AppComponent,
     ToolbarComponent,
     MainComponent,
-    RightComponent
+    RightComponent,
+    ServersComponent,
+    ServerComponent
   ],
   imports: [
     BrowserModule

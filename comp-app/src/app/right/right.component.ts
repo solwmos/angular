@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class RightComponent implements OnInit {
   clickedStatus = false;
   clickedMessage="";
+  servers = ['Server 1', 'Server 2'];
   constructor() 
   {
 
@@ -18,6 +19,6 @@ export class RightComponent implements OnInit {
 onClicked()
 {
   this.clickedStatus = true;
-  
+  this.servers.push('Server');
 }
 }
